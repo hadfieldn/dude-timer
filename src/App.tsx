@@ -158,11 +158,17 @@ function App() {
           >
             <div className="meeting-info">
               <strong>{meeting.name}</strong>
-              <div>
-                Dude:{" "}
-                <span className="time">{formatTime(meeting.dudeTime)}</span> |
-                Not-Dude:{" "}
-                <span className="time">{formatTime(meeting.notDudeTime)}</span>
+              <div className="meeting-times">
+                <span>
+                  Dude:{" "}
+                  <span className="time">{formatTime(meeting.dudeTime)}</span>
+                </span>
+                <span>
+                  Not-Dude:{" "}
+                  <span className="time">
+                    {formatTime(meeting.notDudeTime)}
+                  </span>
+                </span>
               </div>
             </div>
             <div className="meeting-actions">

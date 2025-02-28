@@ -275,3 +275,19 @@ body {
   width: 100%;
   margin-top: 15px;
 }
+
+.meeting-times {
+  display: flex;
+  gap: 8px;
+}
+
+.meeting-times span {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .meeting-times {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
