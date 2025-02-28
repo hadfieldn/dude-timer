@@ -40,11 +40,7 @@ function App() {
   };
 
   const handleMeetingSelect = (meeting: Meeting) => {
-    if (
-      !window.confirm(
-        "Are you sure you want to replace the current timer data with this meeting's data?"
-      )
-    ) {
+    if (!window.confirm(`Update timers to settings from ${meeting.name}?`)) {
       return;
     }
     // Update both the timer values and the name field
@@ -72,7 +68,7 @@ function App() {
   };
 
   const handleDeleteMeeting = (id: string, name: string) => {
-    if (window.confirm(`Are you sure you want to delete meeting "${name}"?`)) {
+    if (window.confirm(`Are you sure you want to delete ${name}?`)) {
       deleteMeeting(id);
     }
   };
