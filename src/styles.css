@@ -190,7 +190,7 @@ body {
 }
 
 .button-action.delete {
-  background: #e74c3c;
+  background: linear-gradient(145deg, #7f8c8d, #95a5a6);
   color: white;
   padding: 8px;
   width: 32px;
