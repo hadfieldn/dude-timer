@@ -291,3 +291,8 @@ body {
     gap: 4px;
   }
 }
+
+.meeting-info strong {
+  display: block;
+  margin-bottom: 4px;
+}
