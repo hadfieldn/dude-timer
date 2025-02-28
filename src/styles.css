@@ -296,3 +296,13 @@ body {
   display: block;
   margin-bottom: 4px;
 }
+
+.meeting-header {
+  margin-bottom: 4px;
+}
+
+.timestamp {
+  font-size: 0.85em;
+  color: #666;
+  font-weight: 300;
+}

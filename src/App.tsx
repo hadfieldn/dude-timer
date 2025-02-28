@@ -55,6 +55,7 @@ function App() {
       name: newMeetingName,
       dudeTime,
       notDudeTime,
+      savedAt: new Date().toISOString(),
     };
     saveMeeting(newMeeting);
     // Reset name field to default
@@ -153,7 +154,23 @@ function App() {
             onClick={() => handleMeetingSelect(meeting)}
           >
             <div className="meeting-info">
-              <strong>{meeting.name}</strong>
+              <div className="meeting-header">
+                <strong>
+                  {meeting.name}
+                  {meeting.savedAt && (
+                    <span className="timestamp">
+                      &emsp;
+                      {new Date(meeting.savedAt).toLocaleString([], {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
+                      })}
+                    </span>
+                  )}
+                </strong>
+              </div>
               <div className="meeting-times">
                 <span>
                   Dude:{" "}
