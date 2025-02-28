@@ -40,7 +40,7 @@ function App() {
   };
 
   const handleMeetingSelect = (meeting: Meeting) => {
-    if (!window.confirm(`Update timers to settings from ${meeting.name}?`)) {
+    if (!window.confirm(`Update timers to settings of ${meeting.name}?`)) {
       return;
     }
     // Update both the timer values and the name field
